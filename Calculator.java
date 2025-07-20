@@ -4,7 +4,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         double x,y;
         boolean running = true;
-
+        double[] inputs;
         while(running){
             displayMenu();
 
@@ -16,35 +16,24 @@ public class Calculator {
                         running = false;
                         break;
                     case 1: // add
-                        System.out.println("Enter The First Number: ");
-                         x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                         y = scanner.nextDouble();
-                         System.out.println("Result : "+add(x,y));
+                        inputs = getTwoInputs(scanner);
+                        System.out.println("Result : " + add(inputs[0], inputs[1]));
+
                         break;
                     case 2: // sub
-                        System.out.println("Enter The First Number: ");
-                         x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                         y = scanner.nextDouble();
-                        System.out.println("Result : "+sub(x,y));
+                         inputs = getTwoInputs(scanner);
+                        System.out.println("Result : "+sub(inputs[0], inputs[1]));
                         break;
                     case 3: // mul
-                        System.out.println("Enter The First Number: ");
-                         x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                         y = scanner.nextDouble();
-                        System.out.println("Result : "+mul(x,y));
+                         inputs = getTwoInputs(scanner);
+                        System.out.println("Result : "+mul(inputs[0], inputs[1]));
                         break;
                     case 4: // div
-                        System.out.println("Enter The First Number: ");
-                        x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                        y = scanner.nextDouble();
-                        if(y==0){
+                       inputs = getTwoInputs(scanner);
+                        if(inputs[1]==0){
                             System.out.println("Error: Division by zero is undefined.");
                         }else{
-                            System.out.println("Result : "+div(x,y));
+                            System.out.println("Result : "+div(inputs[0], inputs[1]));
                         }
                         break;
                     case 5: // sqrt
@@ -53,11 +42,8 @@ public class Calculator {
                         System.out.println("Result : "+sqrt(x));
                         break;
                     case 6: // power
-                        System.out.println("Enter The Base Number: ");
-                        x = scanner.nextDouble();
-                        System.out.println("Enter The Exponent: ");
-                        y = scanner.nextDouble();
-                        System.out.println("Result : " + calcPower(x, y));
+                        inputs = getTwoInputs(scanner);
+                        System.out.println("Result : " + calcPower(inputs[0], inputs[1]));
                         break;
                     case 7: // sine
                         System.out.println("Enter The Number: ");
@@ -100,18 +86,12 @@ public class Calculator {
                         System.out.println("Result : "+floorNumber(x));
                         break;
                     case 15: // min
-                        System.out.println("Enter The First Number: ");
-                        x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                        y = scanner.nextDouble();
-                        System.out.println("Result : "+findMin(x,y));
+                        inputs = getTwoInputs(scanner);
+                        System.out.println("Result : "+findMin(inputs[0], inputs[1]));
                         break;
                     case 16: // max
-                        System.out.println("Enter The First Number: ");
-                        x = scanner.nextDouble();
-                        System.out.println("Enter The second Number: ");
-                        y = scanner.nextDouble();
-                        System.out.println("Result : "+findMax(x,y));
+                        inputs = getTwoInputs(scanner);
+                        System.out.println("Result : "+findMax(inputs[0], inputs[1]));
                         break;
                     default: // not found
                         System.out.println("Sorry There is no operation for " + userChoice);
@@ -125,6 +105,14 @@ public class Calculator {
             }
         }
     };
+
+    public  static double[] getTwoInputs(Scanner scanner){
+        System.out.println("Enter The First Number: ");
+        double x = scanner.nextDouble();
+        System.out.println("Enter The Second Number: ");
+        double y = scanner.nextDouble();
+        return new double[] {x, y};
+    }
 
 
     public static void displayMenu(){
