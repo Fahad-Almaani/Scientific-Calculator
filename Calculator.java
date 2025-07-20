@@ -49,6 +49,11 @@ public class Calculator {
                         System.out.println("Result : "+sqrt(x));
                         break;
                     case 6: // power
+                        System.out.println("Enter The Base Number: ");
+                        x = scanner.nextDouble();
+                        System.out.println("Enter The Exponent: ");
+                        y = scanner.nextDouble();
+                        System.out.println("Result : " + calcPower(x, y));
                         break;
                     case 7: // sine
                         System.out.println("Enter The Number: ");
@@ -77,8 +82,8 @@ public class Calculator {
                         break;
                     case 12: //round
                         System.out.println("Enter The Number: ");
-                        long z = scanner.nextLong();
-                        System.out.println("Result : "+roundNumber(z));
+                        x = scanner.nextDouble();
+                        System.out.println("Result : "+roundNumber(x));
                         break;
                     case 13: // ceil
                         System.out.println("Enter The Number: ");
@@ -186,7 +191,7 @@ public class Calculator {
         return Math.abs(x);
     }
 
-    public static long roundNumber(long x){
+    public static long roundNumber(double x){
         return Math.round(x);
     }
 
