@@ -20,89 +20,89 @@ public class Calculator {
                          x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                          y = scanner.nextDouble();
-                         System.out.println(add(x,y));
+                         System.out.println("Result : "+add(x,y));
                         break;
                     case 2: // sub
                         System.out.println("Enter The First Number: ");
                          x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                          y = scanner.nextDouble();
-                        System.out.println(sub(x,y));
+                        System.out.println("Result : "+sub(x,y));
                         break;
                     case 3: // mul
                         System.out.println("Enter The First Number: ");
                          x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                          y = scanner.nextDouble();
-                        System.out.println(mul(x,y));
+                        System.out.println("Result : "+mul(x,y));
                         break;
                     case 4: // div
                         System.out.println("Enter The First Number: ");
                         x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                         y = scanner.nextDouble();
-                        System.out.println(div(x,y));
+                        System.out.println("Result : "+div(x,y));
                         break;
                     case 5: // sqrt
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(sqrt(x));
+                        System.out.println("Result : "+sqrt(x));
                         break;
                     case 6: // power
                         break;
                     case 7: // sine
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(sine(x));
+                        System.out.println("Result : "+sine(x));
                         break;
                     case 8:// cosine
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(calcCosine(x));
+                        System.out.println("Result : "+calcCosine(x));
                         break;
                     case 9: // tangent
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(calculateTangent(x));
+                        System.out.println("Result : "+calculateTangent(x));
                         break;
                     case 10: // NLog
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(calculateNaturalLogarithm(x));
+                        System.out.println("Result : "+calculateNaturalLogarithm(x));
                         break;
                     case 11: // Abs
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(calculateAbsolute(x));
+                        System.out.println("Result : "+calculateAbsolute(x));
                         break;
                     case 12: //round
                         System.out.println("Enter The Number: ");
                         long z = scanner.nextLong();
-                        System.out.println(roundNumber(z));
+                        System.out.println("Result : "+roundNumber(z));
                         break;
                     case 13: // ceil
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(ceilingNumber(x));
+                        System.out.println("Result : "+ceilingNumber(x));
                         break;
                     case 14: // floor
                         System.out.println("Enter The Number: ");
                         x = scanner.nextDouble();
-                        System.out.println(floorNumber(x));
+                        System.out.println("Result : "+floorNumber(x));
                         break;
                     case 15: // min
                         System.out.println("Enter The First Number: ");
                         x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                         y = scanner.nextDouble();
-                        System.out.println(findMin(x,y));
+                        System.out.println("Result : "+findMin(x,y));
                         break;
                     case 16: // max
                         System.out.println("Enter The First Number: ");
                         x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                         y = scanner.nextDouble();
-                        System.out.println(findMax(x,y));
+                        System.out.println("Result : "+findMax(x,y));
                         break;
                     default: // not found
                         System.out.println("Sorry There is no operation for " + userChoice);
@@ -137,19 +137,10 @@ public class Calculator {
         System.out.println("14. Floor Number");
         System.out.println("15. Minimum");
         System.out.println("16. Maximum");
+        System.out.print("Choice Operation: ");
     }
 
-    public static void preformOperation(Scanner scanner,int choice){
-//        if(twoOprands){
-//            System.out.println("Enter The First Number: ");
-//            double x = scanner.nextDouble();
-//            System.out.println("Enter The second Number: ");
-//            double y = scanner.nextDouble();
-//        }else{
-//
-//        }
 
-    }
 
     public static double add(double x, double y){
       return  x + y;
