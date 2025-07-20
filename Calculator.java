@@ -7,6 +7,7 @@ public class Calculator {
 
         while(running){
             displayMenu();
+
             try{
                 int userChoice = scanner.nextInt();
                 switch (userChoice){
@@ -109,7 +110,8 @@ public class Calculator {
                 }
 
             }catch (Exception e){
-                System.out.println("The choice  you EnteredEntered is not valid");
+                System.out.println("Invalid Input");
+                scanner.nextLine();
                 continue;
             }
         }
