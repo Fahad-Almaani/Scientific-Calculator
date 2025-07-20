@@ -41,7 +41,11 @@ public class Calculator {
                         x = scanner.nextDouble();
                         System.out.println("Enter The second Number: ");
                         y = scanner.nextDouble();
-                        System.out.println("Result : "+div(x,y));
+                        if(y==0){
+                            System.out.println("Error: Division by zero is undefined.");
+                        }else{
+                            System.out.println("Result : "+div(x,y));
+                        }
                         break;
                     case 5: // sqrt
                         System.out.println("Enter The Number: ");
